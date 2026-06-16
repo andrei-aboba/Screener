@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Скринер дивидендных бумаг — Московская биржа</title>
+  <link rel="stylesheet" href="style.css">
+</head>
+<body>
+  <section class="hero" aria-label="Главный экран">
+    <!-- Фоновые анимации -->
+    <div class="hero__background">
+      <div class="hero__chart">
+        <div class="chart-line line1"></div>
+        <div class="chart-line line2"></div>
+        <div class="chart-line line3"></div>
+        <div class="chart-line line4"></div>
+        <div class="chart-line line5"></div>
+      </div>
+      <div class="hero__candles">
+        <div class="candle" style="animation-delay:0s;"></div>
+        <div class="candle" style="animation-delay:0.3s;"></div>
+        <div class="candle" style="animation-delay:0.6s;"></div>
+        <div class="candle" style="animation-delay:0.9s;"></div>
+        <div class="candle" style="animation-delay:1.2s;"></div>
+        <div class="candle" style="animation-delay:1.5s;"></div>
+        <div class="candle" style="animation-delay:1.8s;"></div>
+        <div class="candle" style="animation-delay:2.1s;"></div>
+      </div>
+      <div class="hero__dots">
+        <span class="dot" style="left:10%; animation-delay:0s;"></span>
+        <span class="dot" style="left:20%; animation-delay:0.5s;"></span>
+        <span class="dot" style="left:35%; animation-delay:1s;"></span>
+        <span class="dot" style="left:50%; animation-delay:1.5s;"></span>
+        <span class="dot" style="left:65%; animation-delay:2s;"></span>
+        <span class="dot" style="left:80%; animation-delay:2.5s;"></span>
+        <span class="dot" style="left:92%; animation-delay:3s;"></span>
+      </div>
+      <div class="hero__ticker tape">
+        <div class="ticker-item">SBER 285.40 <span class="up">+0.8%</span></div>
+        <div class="ticker-item">GAZP 198.20 <span class="down">-0.3%</span></div>
+        <div class="ticker-item">LKOH 7450.00 <span class="up">+1.2%</span></div>
+        <div class="ticker-item">ROSN 560.10 <span class="down">-0.5%</span></div>
+        <div class="ticker-item">MTS 320.05 <span class="up">+0.4%</span></div>
+        <div class="ticker-item">NLMK 215.00 <span class="up">+0.9%</span></div>
+        <div class="ticker-item">SBER 285.40 <span class="up">+0.8%</span></div>
+        <div class="ticker-item">GAZP 198.20 <span class="down">-0.3%</span></div>
+        <div class="ticker-item">LKOH 7450.00 <span class="up">+1.2%</span></div>
+        <div class="ticker-item">ROSN 560.10 <span class="down">-0.5%</span></div>
+        <div class="ticker-item">MTS 320.05 <span class="up">+0.4%</span></div>
+        <div class="ticker-item">NLMK 215.00 <span class="up">+0.9%</span></div>
+      </div>
+      <div class="hero__floating-icons">
+        <span class="floating-icon" style="top:10%; left:5%; animation-duration:18s;">📈</span>
+        <span class="floating-icon" style="top:20%; right:8%; animation-duration:22s; animation-delay:-3s;">💹</span>
+        <span class="floating-icon" style="top:60%; left:2%; animation-duration:15s; animation-delay:-7s;">📊</span>
+        <span class="floating-icon" style="top:40%; right:3%; animation-duration:20s; animation-delay:-5s;">🪙</span>
+        <span class="floating-icon" style="top:80%; left:10%; animation-duration:17s; animation-delay:-2s;">📉</span>
+        <span class="floating-icon" style="top:15%; left:45%; animation-duration:25s; animation-delay:-10s;">⚡</span>
+        <span class="floating-icon" style="top:70%; right:20%; animation-duration:19s; animation-delay:-8s;">📆</span>
+      </div>
+      <div class="hero__tickers">
+        <span class="ticker">SBER</span>
+        <span class="ticker">GAZP</span>
+        <span class="ticker">LKOH</span>
+        <span class="ticker">ROSN</span>
+        <span class="ticker">MTS</span>
+        <span class="ticker">NLMK</span>
+      </div>
+    </div>
+
+    <div class="hero__inner">
+      <h1 class="hero__title">Скринер дивидендных бумаг Московской биржи</h1>
+      <p class="hero__bio">
+        Автоматически отбираем акции по шести критериям и формируем структурированные инвестиционные
+        гипотезы с прозрачным обоснованием. Экономьте время на анализе и не пропускайте
+        ключевые даты дивидендных отсечек.
+      </p>
+      <p class="hero__subtitle">Авторская алгоритмическая модель</p>
+      <a href="#strategies" class="hero__cta">Подобрать стратегию</a>
+    </div>
+  </section>
+
+  <!-- Секция: Какое направление инвестирования ближе вам -->
+  <section id="risk-profile" class="risk-profile" aria-label="Какое направление инвестирования ближе вам">
+    <div class="risk-profile__inner">
+      <h2 class="risk-profile__title">Какое направление инвестирования ближе вам</h2>
+      <form class="risk-profile__form" id="risk-form">
+        <div class="risk-profile__sliders">
+          <div class="slider-group">
+            <label for="slider1" class="slider-label">Отсутствие высокорискованных сделок внутри дня</label>
+            <input type="range" id="slider1" class="slider-input" min="0" max="100" value="50">
+            <output class="slider-output" id="output1">50%</output>
+          </div>
+          <div class="slider-group">
+            <label for="slider2" class="slider-label">Сделки без кредитных плеч</label>
+            <input type="range" id="slider2" class="slider-input" min="0" max="100" value="50">
+            <output class="slider-output" id="output2">50%</output>
+          </div>
+          <div class="slider-group">
+            <label for="slider3" class="slider-label">Любитель вкладов и облигаций</label>
+            <input type="range" id="slider3" class="slider-input" min="0" max="100" value="50">
+            <output class="slider-output" id="output3">50%</output>
+          </div>
+          <div class="slider-group">
+            <label for="slider4" class="slider-label">Сделки в отсутствии новостей</label>
+            <input type="range" id="slider4" class="slider-input" min="0" max="100" value="50">
+            <output class="slider-output" id="output4">50%</output>
+          </div>
+        </div>
+
+        <div class="risk-profile__result">
+          <div class="risk-profile__average">
+            <span class="average-label">Среднее значение:</span>
+            <span class="average-value" id="average-value">50%</span>
+          </div>
+          <div class="risk-profile__gauge">
+            <div class="gauge-bar" id="gauge-bar" style="width: 50%;"></div>
+          </div>
+          <div class="risk-profile__description" id="risk-description">Более консервативное</div>
+        </div>
+      </form>
+    </div>
+  </section>
+
+  <!-- Секция стратегий -->
+  <section id="strategies" class="strategies" aria-label="Стратегии">
+    <div class="strategies__inner">
+      <h2 class="strategies__title">Стратегии</h2>
+      <div id="skills-grid" class="strategies__grid">
+        <article class="strategy-card" data-index="0" role="button" tabindex="0" aria-expanded="false">
+          <h3 class="strategy-card__title">Начинающий инвестор</h3>
+          <p class="strategy-card__desc">
+            Простая консервативная стратегия для новичков: скринер автоматически отбирает
+            5–7 наиболее устойчивых дивидендных «голубых фишек» по шести базовым критериям.
+            Готовые гипотезы без сложного анализа, диверсификация портфеля и предупреждения
+            о риске «дивидендной ловушки» — покупки за 1–3 дня до отсечки.
+          </p>
+        </article>
+        <article class="strategy-card" data-index="1" role="button" tabindex="0" aria-expanded="false">
+          <h3 class="strategy-card__title">Консервативный инвестор</h3>
+          <p class="strategy-card__desc">
+            Расширенная консервативная модель для опытных любителей-инвесторов: полный
+            алгоритмический скрининг по шести критериям с ужесточёнными порогами.
+            Сочетает подходы «Дивидендных аристократов» и «Собак Доу», дивидендный
+            календарь с прогнозом гэпа, секторная диверсификация и уведомления об отсечках.
+            Экономия более 10 часов в месяц на анализе при сохранении прозрачности отбора.
+          </p>
+        </article>
+        <article class="strategy-card" data-index="2" role="button" tabindex="0" aria-expanded="false">
+          <h3 class="strategy-card__title">Агрессивный инвестор</h3>
+          <p class="strategy-card__desc">
+            Агрессивная рискованная стратегия для профессионалов: фокус на максимальной
+            дивидендной доходности и тактике дивидендных отсечек с краткосрочным
+            удержанием позиций.
+            Алгоритм «Собак Доу» отбирает акции с наивысшей доходностью
+            при контроле ликвидности и коэффициента выплат.
+            Предусмотрены расширенная аналитика по эмитентам, экспорт данных и предупреждения о волатильности
+            и дивидендном гэпе для осознанного принятия повышенных рисков.
+          </p>
+        </article>
+      </div>
+
+      <!-- Ближайшие дивидендные отсечки -->
+      <div class="dividend-calendar">
+        <h3 class="dividend-calendar__title">📅 Ближайшие дивидендные отсечки</h3>
+        <div class="dividend-calendar__list">
+          <!-- генерируется JS -->
+        </div>
+      </div>
+
+      <button type="button" id="select-strategy-btn" class="strategies__btn" disabled>
+        Выбрать стратегию
+      </button>
+    </div>
+  </section>
+
+  <!-- Портфель акций -->
+  <section id="portfolio" class="portfolio portfolio-hidden" aria-label="Портфель акций">
+    <div class="portfolio__inner">
+      <h2 class="portfolio__title">Портфель акций</h2>
+      <div id="portfolio-grid" class="portfolio__grid"></div>
+      <button id="confirm-portfolio-btn" class="portfolio__confirm-btn">Подтвердить выбор</button>
+    </div>
+  </section>
+
+  <!-- Связь с менеджером -->
+  <section id="contact-manager" class="contact-manager" aria-label="Связь с менеджером">
+    <div class="contact-manager__inner">
+      <h2 class="contact-manager__title">Связь с менеджером</h2>
+      <p class="contact-manager__subtitle">
+        Оставьте заявку, и наш специалист свяжется с вами для консультации.
+      </p>
+      <button id="call-manager-btn" class="contact-manager__btn">
+        <span class="contact-manager__btn-icon">📞</span>
+        Связаться с менеджером по телефону
+        <span class="contact-manager__btn-phone">+7 (999) 123-45-67</span>
+      </button>
+    </div>
+  </section>
+
+  <!-- Модальное окно -->
+  <div id="modal-overlay" class="modal-overlay hidden" aria-hidden="true">
+    <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modal-title">
+      <button id="modal-close-btn" class="modal__close-btn" aria-label="Закрыть окно">&times;</button>
+      <h2 id="modal-title" class="modal__title">Оставьте свои контактные данные</h2>
+      <form id="modal-form" class="modal__form">
+        <div class="modal__field">
+          <label for="modal-phone" class="modal__label">Номер телефона</label>
+          <input type="tel" id="modal-phone" class="modal__input" placeholder="+7 (___) ___-__-__" required>
+        </div>
+        <div class="modal__field">
+          <label for="modal-name" class="modal__label">ФИО</label>
+          <input type="text" id="modal-name" class="modal__input" placeholder="Иванов Иван Иванович" required>
+        </div>
+        <button type="submit" class="modal__submit-btn">Отправить</button>
+      </form>
+    </div>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
